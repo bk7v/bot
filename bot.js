@@ -1353,7 +1353,7 @@ client.on('ready', () => {//new ready event
  
  
  
- lient.on('message', msg => {
+client.on('message' , msg => {
   if (msg.content === 'فلسطين') {      
     msg.channel.send(":flag_ps:")
   }
