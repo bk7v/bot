@@ -431,7 +431,7 @@ client.on('message', message => {
     if (message.content === ".help") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setFooter(`© MrKayan.`, 'https://f.top4top.net/p_9515rj9d1.png')
+  .setFooter(`@bk7-v`, 'https://e.top4top.net/p_1111ty2ot1.png')
   .setColor("#000000")
   .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3: تم الارسال الاوامر الي خاص")
   .addField("** تم تطوير وبرمجه البوت من قبل :wrench: **","**™ » 『♕bk7-v#5107 **")
@@ -1286,23 +1286,176 @@ client.on("message", (message) => {
     });
 
 
+ client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`ولكم نورت السيرفر
+ ${member}  
+ `) 
+}).catch(console.error)
+})
+
+
+ 
+ 
+ client.on('message', message => {
+    if (message.content.startsWith(".رابط")) {
+
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 100,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send("**:link:.تم ارسال الرابط برسالة خاصة**")
+
+message.author.send(`**مدة الرابط : يـوم
+عدد استخدامات الرابط : 100**`)
+
+
+    }
+});
+
  
  
  
  
+ //Best Rainbow Bot .
+client.on('message', message => {//new msg event
+if(!message.channel.guild) return;
+  if(message.content.startsWith(prefix + '.set')) {//to create the rainbow role
+	  let role = message.guild.roles.find('name', 'Rainbow bot.')
+    if(role) return message.channel.send(`This Step Already Completed !`)//if the role already created return with this msg
+  //start of create role 
+  if(!role){
+    rainbow =  message.guild.createRole({
+   name: "Rainbow bot.",//the role will create name
+   color: "#000000",//the default color
+   permissions:[]//the permissions
+ //end of create role
+})
+
+}
+message.channel.send('Done The Rainbow Role Setup Has Been Completed')//if the step completed
+}})
+
+client.on('ready', () => {//new ready event
+  setInterval(function(){
+      client.guilds.forEach(g => {
+                  var role = g.roles.find('name', 'Rainbow bot.');//rainbow role name
+                  if (role) {
+                      role.edit({color : "RANDOM"});
+                  };
+      });
+  }, 5000);//the rainbow time
+})
  
  
  
  
+ lient.on('message', msg => {
+  if (msg.content === 'فلسطين') {      
+    msg.channel.send(":flag_ps:")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'السعودية') {      
+    msg.channel.send("🇸🇦")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'مصر') {      
+    msg.channel.send("🇪🇬")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'المغرب') {      
+    msg.channel.send("🇲🇦")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'العراق') {      
+    msg.channel.send("🇮🇶")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'الجزائر') {      
+    msg.channel.send("🇩🇿")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'الامارات') {      
+    msg.channel.send("🇦🇪")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'تونس') {      
+    msg.channel.send("🇹🇳")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'سوريا') {      
+    msg.channel.send("🇸🇾")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ليبيا') {      
+    msg.channel.send("🇱🇾")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'قطر') {      
+    msg.channel.send("🇶🇦")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'الصومال') {      
+    msg.channel.send("🇸🇴")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'عمان') {      
+    msg.channel.send("🇴🇲")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'موريتانيا') {      
+    msg.channel.send("🇲🇷")
+  }
+});
+
+
  
  
- 
- 
- 
- 
- 
- 
- 
+   client.on('message' , message => { //mrx
+    if (message.content.startsWith(prefix + ".invite")) {
+        if(!message.channel.guild) return message.reply('This Command is Only For Servers');
+     let mrxinvite = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)
+ .setAuthor(message.author.username, message.author.avatarURL)
+ .setTitle(`Click Here To Invite ${client.user.username}`)
+ .setURL('Link Bot')
+ message.author.sendEmbed(mrxinvite).then(c => {
+    c.react('🔼')
+  })
+    }
+});//mrx
+  
+  
  
  
  
