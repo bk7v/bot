@@ -11,9 +11,7 @@ client.on('message', msg => {
   }
 });
 
- 
- const Discord = require('discord.js');
-const client = new Discord.Client();
+
 client.on('ready', function(){
     var ms = 10000 ;
     var setGame = [' .help','GRAX Server','Have Fun !',' Iam Here For Games',' .help'];
