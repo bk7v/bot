@@ -1290,7 +1290,7 @@ let xpadd = Math.floor(Math.random() * (30 - 20 + 1));
   
 
 
-const fs = require("fs");
+
 const voice = JSON.parse(fs.readFileSync("./voiceState.json", "utf8"));
 client.on('message', async message => {
 if(message.author.bot) return;
