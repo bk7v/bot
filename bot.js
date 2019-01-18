@@ -1258,11 +1258,11 @@ welcomer.sendFile(canvas.toBuffer())
 
 
 
-const mysql = require("mysql"); //npm i mysql
+ //npm i mysql
 var con = mysql.createConnection({
   host: 'localhost',
   user: "root",
-  password: "-----", //باس وورد الما سكل حق
+  password: "1121", //باس وورد الما سكل حق
   database: 'test' 
 });
 
