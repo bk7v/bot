@@ -4,6 +4,8 @@ const fs = require('fs');
 const moment = require('moment');
 const jimp = require('jimp');
 const Canvas = require('canvas');
+const mysql = require('mysql');
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
